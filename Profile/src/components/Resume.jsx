@@ -9,16 +9,9 @@ function Resume()
       
         <div className="flex flex-col md:flex-row gap-10 w-full max-w-5xl border border-white/20 rounded-2xl p-8 bg-white/5 shadow-lg">
           
-          {/* Resume Image Preview */}
-          <div className="flex-1 border border-white/10 rounded-2xl overflow-hidden shadow-md bg-white/10 flex items-center justify-center">
-            <img
-              src="/resume-preview.png" 
-              alt="Resume Preview"
-              className="w-full h-auto object-contain"
-            />
-          </div>
+  
       
-          {/* Description or Text Area */}
+          
           <div className="flex-1 border border-white/10 rounded-2xl p-6 bg-white/10">
             <h3 className="text-2xl font-semibold mb-4 text-orange-300">Download My Resume</h3>
             <p className="mb-6 text-gray-300 leading-relaxed">

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link}from 'react-router-dom'
 import {FaLinkedin,FaGithub,FaTwitter} from 'react-icons/fa'
-import { SiFirebase, SiTailwindcss, SiReact, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiFirebase, SiTailwindcss, SiReact, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
 
 import './HomeStyle.css'
 function Home() {
@@ -11,15 +11,14 @@ function Home() {
   ];
 
   const icons = [
-    { icon: <FaLinkedin />, link: "https://linkedin.com/in/yourprofile" },
-    { icon: <FaGithub />, link: "https://github.com/yourusername" },
-    { icon: <FaTwitter />, link: "https://twitter.com/yourhandle" },
-    { icon: <SiReact />, link: "https://reactjs.org" },
-    { icon: <SiTailwindcss />, link: "https://tailwindcss.com" },
-    { icon: <SiFirebase />, link: "https://firebase.google.com" },
-    { icon: <SiHtml5 />, link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" },
-    { icon: <SiCss3 />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" }
-  ]
+
+    { icon: <SiReact style={{ color: "#61DBFB" }} />, link: "https://reactjs.org" },              
+    { icon: <SiTailwindcss style={{ color: "#38BDF8" }} />, link: "https://tailwindcss.com" },     
+    { icon: <SiFirebase style={{ color: "#FFCA28" }} />, link: "https://firebase.google.com" },    
+    { icon: <SiHtml5 style={{ color: "#E44D26" }} />, link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" }, // HTML orange
+    { icon: <SiCss3 style={{ color: "#264DE4" }} />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" }, 
+    {icon: <SiJavascript style={{ color: "#f7df1e" }} />,link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}
+    ]
 
   return (
     <div className='bg-gradient-to-br from-black to-slate-700 p-10 w-full min-h-screen'>
@@ -49,7 +48,7 @@ function Home() {
       </div>
 
       {/* About Me Section */}
-      <div className="w-full px-6 py-16 text-white mt-10 rounded-2xl bg-white/5 border border-white/20">
+      <div id="aboutMe" className="w-full px-6 py-16 text-white mt-10 rounded-2xl bg-white/5 border border-white/20 #aboutMe">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">About Me</h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto rounded-full mb-6"></div>
@@ -60,7 +59,7 @@ function Home() {
       </div>
 
       {/* Skills Section */}
-      <div className="w-full px-6 py-16 text-white mt-10 rounded-2xl bg-white/5 border border-white/20">
+      <div id="Skills" className="w-full px-6 py-16 text-white mt-10 rounded-2xl bg-white/5 border border-white/20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
           
           {/* Left Column */}
@@ -95,8 +94,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-[500px] flex justify-center py-4 overflow-hidden relative border-2 border-white left-[450px]">
-  <div className="flex gap-6 animate-scroll-x w-max border-2 border-white">
+      <div className="w-[500px] flex justify-center py-4 overflow-hidden relative  left-[450px] mt-6">
+  <div className="flex gap-6 animate-scroll-x w-max">
     {icons.map((items, index) => (
       <a
         key={index}

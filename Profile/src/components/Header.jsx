@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+
 // import './headerStyle.css'
 function Header() {
     return (
@@ -9,7 +11,7 @@ function Header() {
                 {/* Logo Section */}
                 <div className="flex items-center space-x-3">
                     <img src="" alt="logo" className="w-10 h-10 object-cover rounded-full bg-gray-200" />
-                    <span className="text-xl font-bold text-gray-800">Nikhil</span>
+                    <span className="text-xl font-bold text-gray-800">Nikhil Kumar</span>
                 </div>
 
                 {/* Navigation Links */}
@@ -27,29 +29,38 @@ function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink 
-                            to="/about" 
-                            className={({ isActive }) =>
-                                isActive 
-                                    ? "text-orange-700 border-b-2 border-orange-700 pb-1" 
-                                    : "hover:text-orange-700"
-                            }
-                        >
-                            About
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/contact" 
-                            className={({ isActive }) =>
-                                isActive 
-                                    ? "text-orange-700 border-b-2 border-orange-700 pb-1" 
-                                    : "hover:text-orange-700"
-                            }
-                        >
-                            Contact Us
-                        </NavLink>
-                    </li>
+            <ScrollLink
+              to="aboutMe"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-orange-700"
+              offset={-70}
+            >
+              About
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Skills"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-orange-700"
+              offset={-70}
+            >
+              Skills
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-orange-700"
+              offset={-70}
+            >
+              Contact Me
+            </ScrollLink>
+          </li>
                     <li>
                         <NavLink 
                             to="/resume" 
@@ -60,18 +71,6 @@ function Header() {
                             }
                         >
                             Resume
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/skills" 
-                            className={({ isActive }) =>
-                                isActive 
-                                    ? "text-orange-700 border-b-2 border-orange-700 pb-1" 
-                                    : "hover:text-orange-700"
-                            }
-                        >
-                            Skills
                         </NavLink>
                     </li>
                 </ul>
